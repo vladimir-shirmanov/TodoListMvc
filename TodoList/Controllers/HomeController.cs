@@ -36,6 +36,7 @@ namespace TodoList.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TodoItem item)
         {
             if (ModelState.IsValid)
